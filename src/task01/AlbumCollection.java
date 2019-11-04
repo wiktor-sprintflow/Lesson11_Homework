@@ -57,10 +57,6 @@ class AlbumCollection {
         return albumsNumber;
     }
 
-    public void setAlbumsNumber(int albumsNumber) {
-        this.albumsNumber = albumsNumber;
-    }
-
     public Album[] getAlbumsCollection() {
         return albumsCollection;
     }
