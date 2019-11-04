@@ -29,15 +29,19 @@ public class ShapeCalculatorApp {
 
     private static void showShapeDetails(ShapeCalculator shapeCalculator, Shape[] shapes) {
         for (Shape shape : shapes) {
-            if (shape instanceof Line2D) {
-                System.out.println(shape + "" + shapeCalculator.lineLength((Line2D) shape));
-            } else if (shape instanceof GeometricShape) {
-                System.out.println(shape + "" + shapeCalculator.shapeArea((GeometricShape) shape));
-            } else if (shape instanceof Shape3D) {
-                System.out.println(shape + "" + shapeCalculator.volume((Shape3D) shape));
-            } else {
-                System.out.println("Nieznany kształt.");
-            }
+//            if (shape instanceof Line2D) {
+//                System.out.println(shape + "" + shapeCalculator.lineLength((Line2D) shape));
+//            } else if (shape instanceof GeometricShape) {
+//                //System.out.println(shape + "" + shapeCalculator.shapeArea((GeometricShape) shape));
+//                System.out.println(shape);
+//            } else if (shape instanceof Shape3D) {
+//                //System.out.println(shape + "" + shapeCalculator.volume((Shape3D) shape));
+//                System.out.println(shape);
+//            } else {
+//                System.out.println(shape);
+//            }
+
+            System.out.println(shape);
         }
     }
 }

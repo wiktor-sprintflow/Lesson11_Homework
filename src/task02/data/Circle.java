@@ -17,6 +17,11 @@ public class Circle extends GeometricShape {
 
     @Override
     public String toString() {
-        return "Koło o promieniu " + radius + " ma pole, które wynosi ";
+        return "Koło o promieniu " + radius + " ma pole, które wynosi " + calculateArea();
+    }
+
+    @Override
+    public double calculateArea() {
+        return Math.PI * Math.pow(radius, 2);
     }
 }

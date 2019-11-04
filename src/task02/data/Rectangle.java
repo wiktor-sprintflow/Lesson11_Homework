@@ -27,6 +27,11 @@ public class Rectangle extends GeometricShape {
 
     @Override
     public String toString() {
-        return "Prostokąt o długościach boków " + sideA + " i " + sideB + " ma pole, które wynosi ";
+        return "Prostokąt o długościach boków " + sideA + " i " + sideB + " ma pole, które wynosi " + calculateArea();
+    }
+
+    @Override
+    public double calculateArea() {
+        return sideA * sideB;
     }
 }

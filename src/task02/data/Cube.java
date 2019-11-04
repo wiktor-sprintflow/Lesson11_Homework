@@ -18,6 +18,11 @@ public class Cube extends Shape3D {
 
     @Override
     public String toString() {
-        return "Sześcian o długości krawędzi " + side + " ma objętość która wynosi ";
+        return "Sześcian o długości krawędzi " + side + " ma objętość która wynosi " + calculateVolume();
+    }
+
+    @Override
+    public double calculateVolume() {
+        return Math.pow(side, 3);
     }
 }
