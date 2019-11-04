@@ -1,5 +1,4 @@
 package task02.data;
-
 import task02.utils.LineCalc;
 
 public class Line2D extends Shape2D {
@@ -31,5 +30,4 @@ public class Line2D extends Shape2D {
     public String toString() {
         return "Odcinek wyznaczony przez współrzędne " + pointA + pointB + " ma długość " + LineCalc.lineLength(this);
     }
-
 }

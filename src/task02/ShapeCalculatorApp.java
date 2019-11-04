@@ -1,11 +1,9 @@
 package task02;
 
 import task02.data.*;
-import task02.utils.ShapeCalculator;
 
 public class ShapeCalculatorApp {
     public static void main(String[] args) {
-        ShapeCalculator shapeCalculator = new ShapeCalculator();
 
         Point point1 = new Point(5, 4);
         Point point2 = new Point(-7, -3);
@@ -24,23 +22,11 @@ public class ShapeCalculatorApp {
         shapes[3] = ball1;
         shapes[4] = cube1;
 
-        showShapeDetails(shapeCalculator, shapes);
+        showShapeDetails(shapes);
     }
 
-    private static void showShapeDetails(ShapeCalculator shapeCalculator, Shape[] shapes) {
+    private static void showShapeDetails(Shape[] shapes) {
         for (Shape shape : shapes) {
-//            if (shape instanceof Line2D) {
-//                System.out.println(shape + "" + shapeCalculator.lineLength((Line2D) shape));
-//            } else if (shape instanceof GeometricShape) {
-//                //System.out.println(shape + "" + shapeCalculator.shapeArea((GeometricShape) shape));
-//                System.out.println(shape);
-//            } else if (shape instanceof Shape3D) {
-//                //System.out.println(shape + "" + shapeCalculator.volume((Shape3D) shape));
-//                System.out.println(shape);
-//            } else {
-//                System.out.println(shape);
-//            }
-
             System.out.println(shape);
         }
     }
