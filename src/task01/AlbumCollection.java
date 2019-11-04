@@ -4,26 +4,22 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 class AlbumCollection {
-    private int albumsNumber;
     private Album[] albumsCollection;
 
     AlbumCollection(int albumsNumber) {
-        this.albumsNumber = albumsNumber;
         this.albumsCollection = new Album[albumsNumber];
     }
 
     public void addAlbumsToCollection() {
-        Album newAlbum = new Album();
 
         for (int i = 0; i < albumsCollection.length; i++) {
-            enterAlbumDetails(newAlbum, (i + 1));
-            albumsCollection[i] = new Album(newAlbum.getArtistName(), newAlbum.getAlbumName(), newAlbum.getReleaseYear());
-
+            albumsCollection[i] = enterAlbumDetails(i + 1);
         }
     }
 
-    private void enterAlbumDetails(Album newAlbum, int i) {
+    private Album enterAlbumDetails(int i) {
         Scanner sc = new Scanner(System.in);
+        Album newAlbum = new Album();
         do {
             System.out.println("Album nr " + i);
             System.out.print("Podaj nazwę artysty: ");
@@ -34,6 +30,7 @@ class AlbumCollection {
             newAlbum.setReleaseYear(sc.nextInt());
             sc.nextLine();
         } while (!isNewAlbumInCollection(newAlbum));
+        return newAlbum;
     }
 
     private boolean isNewAlbumInCollection(Album newAlbum) {
@@ -51,10 +48,6 @@ class AlbumCollection {
     @Override
     public String toString() {
         return "\nAlbumsCollection:\n" + Arrays.toString(albumsCollection);
-    }
-
-    public int getAlbumsNumber() {
-        return albumsNumber;
     }
 
     public Album[] getAlbumsCollection() {
