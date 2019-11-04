@@ -2,8 +2,8 @@ package task02.utils;
 
 import task02.data.Ball;
 import task02.data.Cube;
+import task02.data.Shape3D;
 
 public interface Calc3D {
-    double ballVolume(Ball ball);
-    double cubeVolume(Cube cube);
+    double volume(Shape3D shape);
 }
